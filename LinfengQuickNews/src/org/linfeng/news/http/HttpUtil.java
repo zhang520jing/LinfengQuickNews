@@ -3,7 +3,6 @@ package org.linfeng.news.http;
 import org.apache.http.NameValuePair;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.Log;
 
 public class HttpUtil {

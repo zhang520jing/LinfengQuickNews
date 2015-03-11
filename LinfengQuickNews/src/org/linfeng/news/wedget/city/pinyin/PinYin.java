@@ -9,7 +9,6 @@ import org.linfeng.news.wedget.city.pinyin.HanziToPinyin3.Token;
 
 public class PinYin
 {
-    // 汉字返回拼音，字母原样返回，都转换为小写
     public static String getPinYin(String input)
     {
         ArrayList<Token> tokens = HanziToPinyin3.getInstance().get(input);

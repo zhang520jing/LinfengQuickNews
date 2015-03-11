@@ -93,6 +93,9 @@ public class CustomHttpClient {
         	HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
         	HttpProtocolParams.setContentCharset(params, CHARSET_UTF8);
         	HttpProtocolParams.setUseExpectContinue(params, true);
+        	/*
+        	 * 模拟火狐浏览器
+        	 */
         	HttpProtocolParams.setUserAgent(params,   "Mozilla/5.0(Linux;U;Android 2.2.1;en-us;Nexus One Build.FRG83) "
                     + "AppleWebKit/553.1(KHTML,like Gecko) Version/4.0 Mobile Safari/533.1");
         	//超时的设置
@@ -105,10 +108,10 @@ public class CustomHttpClient {
         	}
         	HttpConnectionParams.setConnectionTimeout(params, connectionTimeOut);
         	/*
-        	 * 请求超时
+        	 * 设置socket请求超时
         	 */
         	HttpConnectionParams.setSoTimeout(params, 40000);
-        	//设置我们的HttpClient支持Http和Http两种模式
+        	//设置我们的HttpClient支持Http和Http两种模式  该协议信任所有证书
         	SchemeRegistry scRegistry=new SchemeRegistry();
         	scRegistry.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
         	scRegistry.register(new Scheme("https", SSLSocketFactory.getSocketFactory(), 443));

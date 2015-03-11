@@ -22,18 +22,6 @@ import java.util.Locale;
 
 import android.text.TextUtils;
 import android.util.Log;
-
-/**
- * An object to convert Chinese character to its corresponding pinyin string. For characters with
- * multiple possible pinyin string, only one is selected according to collator. Polyphone is not
- * supported in this implementation. This class is implemented to achieve the best runtime
- * performance and minimum runtime resources with tolerable sacrifice of accuracy. This
- * implementation highly depends on zh_CN ICU collation data and must be always synchronized with
- * ICU.
- *
- * Currently this file is aligned to zh.txt in ICU 4.6
- * 来自android4.2源码 
- */
 public class HanziToPinyin3 {
     private static final String TAG = "HanziToPinyin";
 
