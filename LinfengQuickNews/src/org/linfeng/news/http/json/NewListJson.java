@@ -34,13 +34,6 @@ public class NewListJson extends JsonPacket {
 	            NewModel newModle = null;
 	            JSONObject jsonObject = new JSONObject(res);
 	            JSONArray jsonArray = jsonObject.getJSONArray(value);
-	            // if (isFirst) {
-	            // for (int i = 0; i < 4; i++) {
-	            // JSONObject js = jsonArray.getJSONObject(i);
-	            // newModle = readNewModle(js);
-	            // newModles.add(newModle);
-	            // }
-	            // }
 
 	            for (int i = 1; i < jsonArray.length(); i++) {
 	                newModle = new NewModel();
